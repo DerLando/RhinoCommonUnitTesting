@@ -46,5 +46,20 @@ namespace RhinoPluginTests
             Assert.AreEqual(1, curves.Length, "Wrong curve count");
             Assert.AreEqual(2 * Math.PI * radius, curves[0].GetLength(), "Wrong curve length");
         }
+
+        [TestMethod]
+        public void Sphere_radius()
+        {
+            // Arrange
+            var radius = 1.0;
+            var Sphere = new Sphere(new Point3d(0, 0, 0), radius);
+            double expected = 1.0;
+
+            // Act
+            double actual = Sphere.Radius;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

@@ -52,12 +52,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ELineTests.cs" />
+    <Compile Include="EVectorTests.cs" />
+    <Compile Include="GPointTests.cs" />
     <Compile Include="TestInit.cs" />
     <Compile Include="ExampleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Geodesics\Geodesics.csproj">
+      <Project>{83f61283-d9cf-4020-aa85-ed9f7038456f}</Project>
+      <Name>Geodesics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
